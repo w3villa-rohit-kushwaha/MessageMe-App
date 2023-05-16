@@ -1,9 +1,12 @@
-<div class=" mt-5">
+<div class="mt-5">
   <div class="d-flex justify-content-center text-center align-items-center icon rounded-circle border">
     <i class="fa-solid fa-5x fa-mug-saucer"></i>
   </div>
-   <div class="text-center mt-1"><h4>Say Something</h4></div>
+  <div class="text-center mt-1">
+    <h4>Say Something</h4>
+  </div>
 </div>
+
 <div class="container-fluid mt-5">
   <div class="row">
     <div class="col-md-9">
@@ -12,26 +15,26 @@
           <!-- Message Box -->
           <div class="message-box">
             <h5 class="card-title">Message Box</h5>
-           <div class="message-content" id="message_container">
+            <div id="message_container">
               <!-- Messages will be displayed here -->
-            <%= render @messages %>
-             </div>
-
-          <%= form_for(@message, url: messages_path, remote: true) do |form| %>
-     <div class="input-group">
-      <%= form.text_field :body , class: "form-control" %>
-      <div class="input-group-append">
-      <%= form.submit "Send" , class: "btn btn-primary" %>
-      </div>
-     </div>
-      <% end %>
+              <%= render @messages %>
+            </div>
 
 
           </div>
           <!-- End of Message Box -->
         </div>
       </div>
+      <%= form_for(@message, url: messages_path, remote: true) do |form| %>
+      <div class="input-group">
+        <%= form.text_field :body, class: "form-control" %>
+        <div class="input-group-append">
+          <%= form.submit "Send", class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
     </div>
+
     <div class="col-md-3">
       <div class="card">
         <div class="card-body">

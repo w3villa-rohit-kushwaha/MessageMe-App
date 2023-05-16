@@ -53,3 +53,10 @@
    border: 4px solid black;
    padding: 5% 5%;
  }
+ .message-box h5{
+  position: sticky;
+    top: 0%;
+    background-color: antiquewhite;
+    padding: 5px;
+ }
+
